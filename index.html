@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .title{
+    color:red;
+    text-transform: uppercase;
+    }
+    
+    </style>
+</head>
+<body>
+<h1 id="pagetitle" class="title subtitle">Title</h1>
+<button onclick="changeTitle()">Change Title</button> 
+    
+
+
+    <script>
+        function changeTitle(){
+        var obj=document.getElementById('pagetitle');
+        obj.innerHTML="Skillverse"; 
+        obj.classList.add('title');
+        alert("Hi i am an alert i can show a message to a user");
+        alert(obj.classList[1]);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Content Manipulation using DOM Methods</title>
+</head>
+<body >
+    <nav>
+        <a href="#" onclick="showHome()">Home</a>
+        <a href="#" onclick="showAbout()">About</a>
+        <a href="#" onclick="showContent()">Content</a>
+    </nav>
+    <div id="page">
+
+
+
+    </div>
+
+
+
+
+
+
+    <div id="home" style="display:none">
+        <h1>Home Page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non natus unde facilis, enim dolor reiciendis. Ad, blanditiis. Debitis porro sint quisquam suscipit repudiandae temporibus quidem quo modi odit exercitationem nostrum nisi, obcaecati ex, eligendi voluptatibus iure assumenda necessitatibus harum? Nihil aperiam commodi distinctio ratione, deserunt numquam esse aut sapiente enim! Iusto facere magni nemo omnis non accusamus laborum autem? Distinctio ab est odit, inventore hic corrupti temporibus nostrum neque, aliquam dolores odio enim laborum nemo aperiam, repellat modi rem? Itaque hic voluptate atque animi rerum modi. Autem, beatae minima. Similique earum vitae veniam minus quos esse nobis natus accusamus, fugit dolor vel delectus ratione alias enim illum cupiditate ducimus laboriosam dignissimos quae obcaecati fuga a nesciunt, ipsam quo. Eveniet ab ducimus suscipit eligendi, nostrum, voluptates vel optio nisi dolorum officiis labore reiciendis alias commodi. Quibusdam tenetur dolorum porro odio. Blanditiis natus, eligendi distinctio sapiente aspernatur facilis reprehenderit expedita reiciendis minus vitae hic impedit inventore dolores perferendis dolor soluta dolore accusamus cupiditate id possimus consectetur quos similique. Accusamus at optio eum doloremque fuga distinctio esse facere numquam magni libero, sapiente reprehenderit accusantium iste, quis cum. Itaque nihil laudantium fuga dolore perferendis aliquid. Eveniet odit hic asperiores voluptates! Reiciendis earum, quae voluptate illum nisi excepturi adipisci accusantium ratione. Ipsam debitis tempora enim facilis, voluptatem ipsum harum laborum velit iusto, aspernatur autem rerum expedita numquam illo. Est voluptatem, ipsa veritatis, sunt voluptate enim non praesentium maiores inventore, reprehenderit voluptates distinctio aperiam asperiores dignissimos! Repudiandae quasi perspiciatis molestiae illo aliquam ipsam minima amet assumenda maiores? At velit, laudantium dolor fuga accusamus hic explicabo eveniet, placeat nisi ratione architecto voluptatem quia ducimus pariatur assumenda quibusdam inventore ipsa magni numquam iure incidunt alias. Consequatur minima rem recusandae, exercitationem doloremque accusantium vitae, quod alias mollitia pariatur velit modi quidem accusamus consequuntur soluta sit odio, fugit totam sapiente.</p>
+    </div>
+    <div id="about" style="display: none;">
+            <h1>About Page</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non natus unde facilis, enim dolor reiciendis. Ad, blanditiis. Debitis porro sint quisquam suscipit repudiandae temporibus quidem quo modi odit exercitationem nostrum nisi, obcaecati ex, eligendi voluptatibus iure assumenda necessitatibus harum? Nihil aperiam commodi distinctio ratione, deserunt numquam esse aut sapiente enim! Iusto facere magni nemo omnis non accusamus laborum autem? Distinctio ab est odit, inventore hic corrupti temporibus nostrum neque, aliquam dolores odio enim laborum nemo aperiam, repellat modi rem? Itaque hic voluptate atque animi rerum modi. Autem, beatae minima. Similique earum vitae veniam minus quos esse nobis natus accusamus, fugit dolor vel delectus ratione alias enim illum cupiditate ducimus laboriosam dignissimos quae obcaecati fuga a nesciunt, ipsam quo. Eveniet ab ducimus suscipit eligendi, nostrum, voluptates vel optio nisi dolorum officiis labore reiciendis alias commodi. Quibusdam tenetur dolorum porro odio. Blanditiis natus, eligendi distinctio sapiente aspernatur facilis reprehenderit expedita reiciendis minus vitae hic impedit inventore dolores perferendis dolor soluta dolore accusamus cupiditate id possimus consectetur quos similique. Accusamus at optio eum doloremque fuga distinctio esse facere numquam magni libero, sapiente reprehenderit accusantium iste, quis cum. Itaque nihil laudantium fuga dolore perferendis aliquid. Eveniet odit hic asperiores voluptates! Reiciendis earum, quae voluptate illum nisi excepturi adipisci accusantium ratione. Ipsam debitis tempora enim facilis, voluptatem ipsum harum laborum velit iusto, aspernatur autem rerum expedita numquam illo. Est voluptatem, ipsa veritatis, sunt voluptate enim non praesentium maiores inventore, reprehenderit voluptates distinctio aperiam asperiores dignissimos! Repudiandae quasi perspiciatis molestiae illo aliquam ipsam minima amet assumenda maiores? At velit, laudantium dolor fuga accusamus hic explicabo eveniet, placeat nisi ratione architecto voluptatem quia ducimus pariatur assumenda quibusdam inventore ipsa magni numquam iure incidunt alias. Consequatur minima rem recusandae, exercitationem doloremque accusantium vitae, quod alias mollitia pariatur velit modi quidem accusamus consequuntur soluta sit odio, fugit totam sapiente.</p>    
+    </div>
+    <div id="content" style="display: none;">
+            <h1>Content Page</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non natus unde facilis, enim dolor reiciendis. Ad, blanditiis. Debitis porro sint quisquam suscipit repudiandae temporibus quidem quo modi odit exercitationem nostrum nisi, obcaecati ex, eligendi voluptatibus iure assumenda necessitatibus harum? Nihil aperiam commodi distinctio ratione, deserunt numquam esse aut sapiente enim! Iusto facere magni nemo omnis non accusamus laborum autem? Distinctio ab est odit, inventore hic corrupti temporibus nostrum neque, aliquam dolores odio enim laborum nemo aperiam, repellat modi rem? Itaque hic voluptate atque animi rerum modi. Autem, beatae minima. Similique earum vitae veniam minus quos esse nobis natus accusamus, fugit dolor vel delectus ratione alias enim illum cupiditate ducimus laboriosam dignissimos quae obcaecati fuga a nesciunt, ipsam quo. Eveniet ab ducimus suscipit eligendi, nostrum, voluptates vel optio nisi dolorum officiis labore reiciendis alias commodi. Quibusdam tenetur dolorum porro odio. Blanditiis natus, eligendi distinctio sapiente aspernatur facilis reprehenderit expedita reiciendis minus vitae hic impedit inventore dolores perferendis dolor soluta dolore accusamus cupiditate id possimus consectetur quos similique. Accusamus at optio eum doloremque fuga distinctio esse facere numquam magni libero, sapiente reprehenderit accusantium iste, quis cum. Itaque nihil laudantium fuga dolore perferendis aliquid. Eveniet odit hic asperiores voluptates! Reiciendis earum, quae voluptate illum nisi excepturi adipisci accusantium ratione. Ipsam debitis tempora enim facilis, voluptatem ipsum harum laborum velit iusto, aspernatur autem rerum expedita numquam illo. Est voluptatem, ipsa veritatis, sunt voluptate enim non praesentium maiores inventore, reprehenderit voluptates distinctio aperiam asperiores dignissimos! Repudiandae quasi perspiciatis molestiae illo aliquam ipsam minima amet assumenda maiores? At velit, laudantium dolor fuga accusamus hic explicabo eveniet, placeat nisi ratione architecto voluptatem quia ducimus pariatur assumenda quibusdam inventore ipsa magni numquam iure incidunt alias. Consequatur minima rem recusandae, exercitationem doloremque accusantium vitae, quod alias mollitia pariatur velit modi quidem accusamus consequuntur soluta sit odio, fugit totam sapiente.</p>
+    
+    </div>
+
+<script>
+    function showHome(){
+        var page=document.getElementById('page');
+        var pagecontent=document.getElementById('home').innerHTML;
+        page.innerHTML=pagecontent;   
+    }
+    function showAbout(){
+        var page=document.getElementById('page');
+        var pagecontent=document.getElementById('about').innerHTML;
+        page.innerHTML=pagecontent;   
+    }
+    function showContent(){
+        var page=document.getElementById('page');
+        var pagecontent=document.getElementById('content').innerHTML;
+        page.innerHTML=pagecontent;   
+    }
+    showHome();
+</script>
+
+</body>
+</html>
