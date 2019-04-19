@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Calculator</title>
+  </head>
+  <body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <h2 class="text-center">Calculator</h2>
+                <table>
+                    <tr>
+                        <td colspan="4" class="m-0">
+                            <input type="number" name="display" id="display" class="w-100 p-0 m-0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button class="w-100">(</button></td>
+                        <td><button class="w-100">)</button></td>
+                        <td><button class="w-100">%</button></td>
+                        <td><button class="w-100" onclick="clearAll()">AC</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="w-100" onclick="typeChar('7')">7</button></td>
+                        <td><button class="w-100" onclick="typeChar('8')">8</button></td>
+                        <td><button class="w-100" onclick="typeChar('9')">9</button></td>
+                        <td><button class="w-100">/</button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button class="w-100" onclick="typeChar('4')">4</button></td>
+                        <td><button class="w-100" onclick="typeChar('5')">5</button></td>
+                        <td><button class="w-100" onclick="typeChar('6')">6</button></td>
+                        <td><button class="w-100">X</button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button class="w-100" onclick="typeChar('1')">1</button></td>
+                        <td><button class="w-100" onclick="typeChar('2')">2</button></td>
+                        <td><button class="w-100" onclick="typeChar('3')">3</button></td>
+                        <td><button class="w-100">-</button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button class="w-100">0</button></td>
+                        <td><button class="w-100">.</button></td>
+                        <td><button class="w-100" onclick="calculate()">=</button></td>
+                        <td><button class="w-100" onclick="changeMode('+')">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="w-100" onclick="changeMode('pow')">pow</button></td>
+                        <td><button>sqrt</button></td>
+                        <td><button></button></td>
+                        <td><button></button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+<script>
+    var prevRes=0;
+    var buttonClicked="";
+function typeChar(character){
+var box=document.getElementById('display');
+var prevValue=box.value;
+box.value=prevValue+character;
+}
+function clearAll(){
+    var box=document.getElementById('display').value="";
+}
+function calculate(){
+    var a=parseInt(prevRes);
+    var b=parseInt(document.getElementById('display').value);
+    switch(buttonClicked){
+        case '+':
+        document.getElementById('display').value=a+b;
+        break;
+        case '-':
+        document.getElementById('display').value=a-b;
+        break;
+        case '*':
+        document.getElementById('display').value=a*b;
+        break;
+        case '/':
+        document.getElementById('display').value=a/b;
+        break;
+        case 'pow':
+        document.getElementById('display').value=Math.pow(a,b);
+        break;
+
+    }
+
+}
+function changeMode(operator){
+    switch(operator){
+        case '+':
+        prevRes=document.getElementById('display').value;
+        buttonClicked="+";
+        clearAll();
+        break;
+        case '-':
+        prevRes=document.getElementById('display').value;
+        buttonClicked="-";
+        clearAll();
+        break;
+        case 'X':
+        prevRes=document.getElementById('display').value;
+        buttonClicked="X";
+        clearAll();
+        break;
+        case 'pow':
+        prevRes=document.getElementById('display').value;
+        buttonClicked="pow";
+        clearAll();
+        break;
+        default:
+    }
+}
+
+</script>
+    
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
