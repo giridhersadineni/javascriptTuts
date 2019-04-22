@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+    
+
+</style>
+</head>
+
+<body>
+    <div class="container">
+                    <div class="card">
+                        <div class="card-header">
+                                <h3 class="card-title">Add a Contact</h3>
+                        </div>
+                        <div class="card-body">
+                            <form action="index.php" method="GET" onsubmit="return validateForm()" id="myform"> 
+                                 <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter Name"  required>
+                                        <p id="nameHelp" class="">Enter your full Name</p>
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="phone">Phone</label>
+                                        <input type="password" class="form-control" id="phone" placeholder="Enter Phone Number">
+                                        <small id="phoneHelp" class="form-text text-muted">Please enter phone in international format</small>
+                            
+                                    </div>
+                                      <button class="btn btn-primary">Add Contact</button>
+                                    </form>
+                                    
+        
+                        </div>
+                    </div>
+    </div>
+       
+    <script>
+    function validateForm(){
+        var name=document.getElementById('name').value;
+        if(name.length<2){
+           var nameElement=document.getElementById('nameHelp');
+            nameElement.classList.add("text-danger");
+            nameElement.innerHTML="Did you write your name in Full?";
+            document.getElementById('name').classList.add("is-invalid");
+        }
+        document.getElementById('myForm').submit();
+
+
+    }
+
+    </script>
+                
+</body>
+</html>
