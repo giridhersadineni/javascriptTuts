@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js Animation</title>
+<link rel="stylesheet" href="animate.css">
+</head>
+<style>
+
+.circle{
+    position: absolute;
+    margin-left: 50vw;
+    margin-top: 40vh;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 100%;
+    background-color: deepskyblue;
+    animation-duration: 1s;
+}
+
+@keyframes grow{
+    from{
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 100%;
+    }
+    to{
+    min-width: 120px;
+    min-height: 120px;
+    max-width: 120px;
+    max-height: 120px;
+    border-radius: 100%;
+    }
+}
+
+</style>
+<body>
+
+   <div class="circle" onclick="shake()"></div>
+
+    
+<script>
+function shake(){
+    var obj = document.getElementsByClassName('circle')[0];
+    obj.classList.add('animated','shake');
+    function handleAnimationEnd() {
+        obj.classList.remove('animated', animationName)
+        obj.removeEventListener('animationend', handleAnimationEnd)
+        if (typeof callback === 'function') callback()
+        obj.classList.add('animated','bounceOutDown');
+    }
+    obj.addEventListener('animationend', handleAnimationEnd)
+}
+
+var obj = document.getElementsByClassName('circle')[0];
+
+</script>    
+
+</body>
+</html>
