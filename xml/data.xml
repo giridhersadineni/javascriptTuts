@@ -1,0 +1,19 @@
+<? xml version="1.0" encoding="utf-8">
+<students>
+    <student>
+    <name>Shravani</name>
+    <address>HNK</address>
+    </student>
+    <student>
+    <name>Swathi</name>
+    <address>HNK</address>
+    </student>
+    <student>
+    <name>Deepthi</name>
+    <address>HNK</address>
+    </student>
+    <student>
+    <name>Bhavani</name>
+    <address>HNK</address>
+    </student>
+</students>

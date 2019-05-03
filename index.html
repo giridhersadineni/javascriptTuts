@@ -5,28 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-    .title{
-    color:red;
-    text-transform: uppercase;
-    }
-    
-    </style>
 </head>
 <body>
-<h1 id="pagetitle" class="title subtitle">Title</h1>
-<button onclick="changeTitle()">Change Title</button> 
-    
+    <button onclick="sendrequest()">Send Request</button>
+    <p id="responsetext">
+
+    </p>
+    <textarea name="" id="restext" cols="30" rows="10">
 
 
+    </textarea>
+</body>
     <script>
-        function changeTitle(){
-        var obj=document.getElementById('pagetitle');
-        obj.innerHTML="Skillverse"; 
-        obj.classList.add('title');
-        alert("Hi i am an alert i can show a message to a user");
-        alert(obj.classList[1]);
+        function sendrequest(){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange=function(){
+                if(this.readyState==4 && this.status==200){
+                    document.getElementById('restext').innerHTML=this.responseText;
+                }
+                if(this.readyState==4 && this.status==404){
+                    document.getElementById('restext').innerHTML="Didnt receive any response 404";
+                    
+                }
+
+            }
+            xhr.open('GET','data.xml',true);
+            xhr.send();
+
         }
     </script>
-</body>
 </html>
